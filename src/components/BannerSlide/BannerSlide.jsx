@@ -4,7 +4,7 @@ export default function BannerSlide() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  cosnt movie
+  
 
   useEffect(() => {
       const slideInterval = setInterval(() => {
