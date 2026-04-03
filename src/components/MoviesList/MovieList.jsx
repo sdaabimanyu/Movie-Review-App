@@ -11,7 +11,7 @@ export default function MovieList({ title, movies }) {
         {movies.map((movie) => (
           <Link to={`/moviedetails/${movie.imdbID}`} key={movie.imdbID}>
             <div
-              className="min-w-48 border border-gray-600 rounded-2xl"
+              className="min-w-48 h-90 border border-gray-600 rounded-2xl"
               onClick={() => console.log(movie)}
             >
               <img

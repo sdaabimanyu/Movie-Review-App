@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-// import SearchPage from './SearchPage';
+import SearchPage from "./SearchPage";
 import BannerSlide from "./components/BannerSlide/BannerSlide";
 import { fetchMovies } from "./api";
 import MovieList from "./components/MoviesList/MovieList";
+import { Link } from "react-router";
 
 export default function Homepage() {
   const [fast, setFast] = useState([]);
@@ -36,17 +37,18 @@ export default function Homepage() {
           <a href="">Favourites</a>
         </div>
         <div>
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="w-100 border border-gray-700  bg-slate-900 rounded-md  p-1"
-            placeholder="Search For Movies"
-          />
+          <Link to="/searchpage">
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="w-100 border border-gray-700  bg-slate-900 rounded-md  p-1"
+              placeholder="Search For Movies"
+            />
+          </Link>
         </div>
       </header>
-      {/* <SearchPage query={query} /> */}
-      <BannerSlide />
+      <BannerSlide />,
       <div className="flex flex-col gap-y-10 box-border">
         <MovieList title="Fast & Furious" movies={fast} />
         <MovieList title="Mission Impossible" movies={mission} />
