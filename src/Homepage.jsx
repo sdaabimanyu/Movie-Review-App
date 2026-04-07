@@ -18,19 +18,19 @@ export default function Homepage() {
   }, []);
 
   const loadMovies = async () => {
-    setFast(await fetchMovies("fast"));
-    setAvengers(await fetchMovies("spider"));
+    setFast(await fetchMovies("avengers"));
+    setAvengers(await fetchMovies("spider man"));
     setMission(await fetchMovies("mission impossible"));
     setDc(await fetchMovies("batman"));
   };
 
   return (
-    <section className="bg-black w-full min-h-screen p-2 ">
+    <section className="bg-slate-900 w-full min-h-screen p-2 ">
       <header className="text-white  shadow-sm shadow-purple-500  h-15 w-full rounded flex justify-between items-center p-3 mb-3">
-        <h1 className="text-lg  font-bold ">
+        <h1 className="text-[16px] md:text-lg  font-bold ">
           <span className="text-purple-500">Le</span> Cinema
         </h1>
-        <div className="flex gap-x-3 text-sm">
+        <div className="hidden md:flex gap-x-3 text-sm">
           <a href="">Home</a>
           <a href="">movies</a>
           <a href="">Top Ratings</a>
@@ -42,14 +42,14 @@ export default function Homepage() {
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-100 border border-gray-700  bg-slate-900 rounded-md  p-1"
+              className="w-60 md:w-100 border border-gray-700  bg-slate-900 rounded-md  p-1"
               placeholder="Search For Movies"
             />
           </Link>
         </div>
       </header>
       <BannerSlide />,
-      <div className="flex flex-col gap-y-10 box-border">
+      <div className="flex flex-col  box-border">
         <MovieList title="Fast & Furious" movies={fast} />
         <MovieList title="Mission Impossible" movies={mission} />
         <MovieList title="Spider-Man" movies={avengers} />

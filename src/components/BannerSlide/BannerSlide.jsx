@@ -67,7 +67,7 @@ export default function BannerSlide() {
 
     const slideInterval = setInterval(() => {
       setSlide((prev) => (prev === movie.length - 1 ? 0 : prev + 1));
-    }, 5000);
+    }, 3000);
     return () => clearInterval(slideInterval);
   }, [movie.length]);
 
