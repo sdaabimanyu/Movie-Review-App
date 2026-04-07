@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
+import avengers from "../assets/Avengers.jpeg";
+import interstellar from "../assets/Interstellar1.jpg";
+import spiderman from "../assets/spiderman.jpg";
+import ratatouille from "../assets/ratatouille1.jpg";
+import monsterInc from "../assets/monster-inc.jpg";
 
 export default function BannerSlide() {
-  // const [movies, setMovies] = useState([]);
+
   const [slide, setSlide] = useState(0);
   const movie = [
     {
@@ -12,7 +17,7 @@ export default function BannerSlide() {
        the Avengers assemble once more to reverse Thanos' actions and
         restore balance to the universe`,
       rating: 8.5,
-      image: "./src/assets/Avengers.jpeg",
+      image: avengers,
     },
     {
       id: 2,
@@ -24,7 +29,7 @@ export default function BannerSlide() {
          a wormhole in search of a new, habitable planet. Directed by Christopher Nolan,
           this epic focuses on a former pilot (Matthew McConaughey) navigating space to save mankind.`,
       rating: 8.7,
-      image: "./src/assets/Interstellar1.jpg",
+      image: interstellar,
     },
     {
       id: 3,
@@ -35,7 +40,7 @@ export default function BannerSlide() {
         Following his uncle's murder, Peter vows to fight crime as "Spider-Man," bringing
          him into direct conflict with the malevolent "Green Goblin".`,
       rating: 8.7,
-      image: "./src/assets/spiderman.jpg",
+      image: spiderman,
     },
     {
       id: 4,
@@ -48,7 +53,7 @@ export default function BannerSlide() {
           struggling kitchen worker, Linguini, to create culinary magic and turn
            Paris upside down.`,
       rating: 8.1,
-      image: "src/assets/ratatouille1.jpg",
+      image: ratatouille,
     },
     {
       id: 5,
@@ -59,12 +64,11 @@ export default function BannerSlide() {
        work at a scream-processing factory. When a little girl named Boo accidentally
         enters their world, the duo must return her home while uncovering a conspiracy.`,
       rating: 8.1,
-      image: "/src/assets/monster-inc.jpg",
+      image: monsterInc,
     },
   ];
 
   useEffect(() => {
-
     const slideInterval = setInterval(() => {
       setSlide((prev) => (prev === movie.length - 1 ? 0 : prev + 1));
     }, 3000);
