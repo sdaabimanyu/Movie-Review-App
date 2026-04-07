@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import avengers from "../assets/Avengers.jpeg";
-import interstellar from "../assets/Interstellar1.jpg";
-import spiderman from "../assets/spiderman.jpg";
-import ratatouille from "../assets/ratatouille1.jpg";
-import monsterInc from "../assets/monster-inc.jpg";
+import avengers from "/public/assets/Avengers.jpeg";
+import interstellar from "/public/assets/Interstellar1.jpg";
+import spiderman from "/public/assets/spiderman.jpg";
+import ratatouille from "/public/assets/ratatouille1.jpg";
+import monsterInc from "/public/assets/monster-inc.jpg";
 
 export default function BannerSlide() {
 
